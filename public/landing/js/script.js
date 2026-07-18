@@ -140,10 +140,12 @@
     if (e.key === 'Escape') { closeModal(); closeImage(); }
   });
 
-  // ---- Enquiry form ----
+  // ---- Enquiry form → WhatsApp ----
   const form = document.getElementById('enquiryForm');
   const successPopup = document.getElementById('successPopup');
   const successClose = document.getElementById('successClose');
+  const WA_NUMBER = '917997761733'; // WhatsApp number with country code
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     let valid = true;
@@ -159,10 +161,29 @@
     }
     if (!valid) return;
 
+    // Build WhatsApp message with all form data
+    const name  = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('mobile').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const desc  = document.getElementById('desc').value.trim();
+
+    const message =
+      `🌟 *New Enquiry — Auto Ads Solution*\n\n` +
+      `👤 *Name:* ${name}\n` +
+      `📞 *Mobile:* ${phone}\n` +
+      `📍 *State:* ${state}\n` +
+      (desc ? `📝 *Description:* ${desc}\n` : '') +
+      `\n_Sent from autoadsolution.com_`;
+
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+    // Show success popup and reset form
     successPopup.classList.add('show');
     successPopup.setAttribute('aria-hidden', 'false');
     form.reset();
   });
+
   successClose.addEventListener('click', () => {
     successPopup.classList.remove('show');
     successPopup.setAttribute('aria-hidden', 'true');

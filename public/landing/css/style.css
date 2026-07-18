@@ -477,17 +477,18 @@ h3 { font-size: 1.25rem; }
 .about-img { position: relative; }
 .founder-photo {
   aspect-ratio: 1;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #1a1a1a, #050505);
-  border: 2px solid var(--gold);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-gold);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff9e6, #fffbe8);
+  border: 4px solid var(--gold);
+  display: flex; align-items: flex-end; justify-content: center;
+  box-shadow: var(--shadow-gold), 0 0 60px rgba(244,180,0,0.25);
   position: relative;
   overflow: hidden;
 }
 .founder-photo::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(244,180,0,0.2), transparent 60%);
+  background: radial-gradient(circle at 50% 0%, rgba(244,180,0,0.12), transparent 70%);
+  pointer-events: none; z-index: 1;
 }
 .founder-initial {
   font-family: 'Poppins', sans-serif;
@@ -499,11 +500,13 @@ h3 { font-size: 1.25rem; }
   position: relative; z-index: 2;
 }
 .founder-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+  object-position: center bottom;
   position: relative; z-index: 2;
   display: block;
+  margin-top: auto;
 }
 .badge-glass {
   position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
