@@ -264,7 +264,7 @@ h3 { font-size: 1.25rem; }
 @keyframes scrollDot { 0%,100%{opacity:1;transform:translateY(0)} 50%{opacity:.3;transform:translateY(10px)} }
 
 /* ============ VIDEO TESTIMONIALS ============ */
-.video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .video-card {
   overflow: hidden;
   transition: transform .4s ease, box-shadow .4s ease;
