@@ -32,8 +32,8 @@
     overflow-y: auto;
   }
   .main-nav.open { right: 0; }
-  .main-nav ul { flex-direction: column; gap: 20px; width: 100%; }
-  .main-nav a { font-size: 1.05rem; }
+  .main-nav ul { flex-direction: column; align-items: stretch; gap: 6px; width: 100%; padding: 6px; border-radius: 16px; }
+  .main-nav ul a { width: 100%; min-height: 44px; padding: 0 14px; font-size: 1rem; border-radius: 10px; }
   .nav-cta { width: 100%; text-align: center; }
   .menu-toggle { display: flex; z-index: 101; position: relative; }
 
