@@ -37,7 +37,7 @@
   .nav-cta { width: 100%; text-align: center; }
   .menu-toggle { display: flex; z-index: 101; position: relative; }
 
-  .video-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .video-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
 /* Mobile */
@@ -55,7 +55,7 @@
   .hero-cta .btn { width: 100%; }
   .hero-card { transform: none; padding: 20px; }
 
-  .video-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .video-grid { grid-template-columns: 1fr; gap: 16px; }
   .feature-grid, .service-grid { grid-template-columns: 1fr; }
   .mission-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
